@@ -12,11 +12,25 @@ export function getQueryParam(name: string): string | null {
 
 // Add a new async script to the page
 // at the end of the body
-export function loadScript(url: string): void {
+export function loadScriptHead(url: string, async: boolean = false): void {
+    const script = document.createElement('script');
+    script.src = url;
+    script.async = async;
+    document.head.appendChild(script);
+}
+
+export function loadScriptBody(url: string): void {
     const script = document.createElement('script');
     script.src = url;
 //    script.async = true;
     document.body.appendChild(script);
+}
+
+export function loadScriptBlockHead(script: string): void {
+    const scriptElem = document.createElement('script');
+//    scriptElem.type = 'text/javascript';
+    scriptElem.textContent = script;
+    document.head.appendChild(scriptElem);
 }
 
 // Add a new CSS file to the page

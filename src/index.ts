@@ -35,7 +35,8 @@ declare global {
 
         // Finsweet attributes
         fsAttributes: [string, (filterInstances: any[]) => void][];
-        Site: SiteDataType
+        Site: SiteDataType;
+        sa5: Array<[string, (config: any) => any]>;
 
         //   modelsDataSourceElems: NodeListOf<HTMLElement>;
         //   modelsSelectElem: HTMLElement | null;

@@ -6,8 +6,6 @@
 import { IRouteHandler } from "./engine/routeDispatcher";
 import { loadCSS, loadEngineCSS, loadScriptBlockHead, loadScriptHead } from "./engine/core";
 
-// import gsap from 'gsap'; 
- 
 // Define the type for the config object
 interface MembershipRoutingConfig {
   routeAfterFirstLogin: string;

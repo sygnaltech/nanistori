@@ -18,8 +18,7 @@ export class RedirPage implements IRouteHandler {
         window.sa5.push(['userInfoChanged', 
           (user) => {
             if(user.user_data_loaded.custom_fields) {
-//console.log(user); 
-  //            console.log(user.data["userid"]); 
+              
               location.href= `/account/${user.data["userid"]}`; 
 
               return;

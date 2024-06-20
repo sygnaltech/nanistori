@@ -12,6 +12,7 @@
 
 import { HomePage } from "./page/home";
 import { RouteDispatcher } from "./engine/routeDispatcher";
+import { RedirPage } from "./page/redir";
 
 export const routeDispatcher = (): RouteDispatcher => {
     
@@ -20,7 +21,8 @@ export const routeDispatcher = (): RouteDispatcher => {
 
         // Site paes
         '/': HomePage,
-
+        
+        '/redir': RedirPage, 
         // TEST Pages
 
     };
